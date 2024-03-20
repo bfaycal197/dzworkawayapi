@@ -3,14 +3,13 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Artisan;
 
 class AppServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
      */
-    public function register()
+    public function register(): void
     {
         //
     }
@@ -18,11 +17,8 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot()
+    public function boot(): void
     {
-        if ($this->app->runningInConsole()) {
-            // Appeler la commande pour démarrer le serveur uniquement en mode console
-            Artisan::call('server:start');
-        }
+        //
     }
 }
